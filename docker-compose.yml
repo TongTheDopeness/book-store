@@ -1,0 +1,17 @@
+app:
+  build: .
+  environment:
+    RAILS_ENV: production
+    RACK_ENV: production
+    SECRET_KEY_BASE: '7716957d8268d38005ed1db5eb5eadf39c9b0fffd3106d304447c9a1e366b61c88a05e06d144283be0d8b400a464049e297c036f0275ba00033a2e1a71daa6c1'
+    RAILS_SERVE_STATIC_FILES: 'true'
+  links:
+  - postgres:postgres
+  ports:
+  - 3000:3000
+
+postgres:
+  image: kiasaki/alpine-postgres
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
