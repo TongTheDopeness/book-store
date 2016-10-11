@@ -18,4 +18,4 @@ deployment:
       - wget https://github.com/rancher/rancher-compose/releases/download/v0.9.0/rancher-compose-linux-amd64-v0.9.0.tar.gz -O - | tar -zx
       - mv rancher-compose-v0.9.0/rancher-compose .
       - rm -rf rancher-compose-v0.9.0
-      - rancher-compose -v
+      - ./rancher-compose -v
